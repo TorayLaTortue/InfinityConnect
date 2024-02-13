@@ -6,11 +6,8 @@ public class Organisation {
     private int id_organisation;
     private String nom;
 
-    private int id_adresse;
-    private String adresse;
-    private String ville;
-    private String code_postal;
-    private String rue;
+    private Adresse adresse;
+
 
     private ArrayList <String> commentaire;
     private String date_ajout;
@@ -18,9 +15,10 @@ public class Organisation {
     private int incident_declarer;
     private int impliquer_mission;
 
-    public Organisation(int id, String nom) {
+    public Organisation(int id, String nom, Adresse adresse) {
         this.id_organisation = id;
         this.nom = nom;
+        this.adresse = adresse;
     }
 
 

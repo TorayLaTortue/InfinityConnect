@@ -9,12 +9,7 @@ public class Civil {
     private String nom;
     private String prenom;
 
-    private int id_adresse;
-    private String ville;
-    private String code_postal;
-    private String rue;
     private Adresse adresse;
-
 
     private String date_naisseance;
     private String date_deces;
@@ -26,12 +21,12 @@ public class Civil {
 
 
 
-    public Civil(int id_civil, String nom, String prenom, int id_adresse, String date_naissance)
+    public Civil(int id_civil, String nom, String prenom, Adresse adresse, String date_naissance)
     {
         this.id_civil = id_civil;
         this.nom = nom;
         this.prenom = prenom;
-        this.id_adresse = id_adresse;
+        this.adresse = adresse;
         this.date_naisseance = date_naissance;
                 
     }
