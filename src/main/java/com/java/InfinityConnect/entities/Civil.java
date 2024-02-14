@@ -34,13 +34,25 @@ public class Civil {
 
 
 
-    public Civil(int id_civil, String nom, String prenom, Adresse adresse, String date_naissance)
+    public Civil()
     {
-        this.id_civil = id_civil;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.adresse = adresse;
-        this.date_naisseance = date_naissance;
                 
     }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
 }
