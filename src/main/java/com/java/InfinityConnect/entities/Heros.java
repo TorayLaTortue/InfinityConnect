@@ -17,7 +17,7 @@ public class Heros extends Civil {
 
     public Heros(int id_civil, int id_hero, String pouvoir, String point_faible, double score, String nom, String prenom, Adresse adresse, String ville, String code_postal, String rue,
             String date_naissance) {
-        super(id_civil, nom, prenom, adresse, date_naissance);
+
         this.id_hero = id_hero;
         this.pouvoir = pouvoir;
         this.point_faible = point_faible;
