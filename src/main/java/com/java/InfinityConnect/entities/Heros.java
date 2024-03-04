@@ -1,10 +1,13 @@
 package com.java.InfinityConnect.entities;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 import java.util.ArrayList;
-
+@Entity
+@Table(name = "hero")
 public class Heros extends Civil {
     @Id
     private int id_hero;
