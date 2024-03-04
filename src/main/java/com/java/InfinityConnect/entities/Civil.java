@@ -19,7 +19,7 @@ public class Civil {
     @Column(name = "adresse")
     private Adresse adresse;
     @Column(name = "date_naissance")
-    private String date_naisseance;
+    private String date_naissance;
     @Column(name = "date_deces")
     private String date_deces;
     @Column(name = "commentaire")
@@ -34,9 +34,10 @@ public class Civil {
 
 
 
-    public Civil()
-    {
-                
+
+
+    public Civil() {
+
     }
 
     public String getNom() {

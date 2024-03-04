@@ -15,10 +15,10 @@ public class CivilController {
 
     @PostMapping("/addCivil")
     Civil newCivil(@RequestBody CivilModels newCivil) {
-        Civil employee = new Civil();
-        employee.setNom(newCivil.getNom());
-        employee.setPrenom(newCivil.getPrenom());
-        return civilService.AddEmployee(employee);
+        Civil civil = new Civil();
+        civil.setNom(newCivil.getNom());
+        civil.setPrenom(newCivil.getPrenom());
+        return civilService.AddCivil(civil);
     }
 
 }

@@ -16,13 +16,7 @@ public class Adresse {
     @Column(name = "rue")
     private String rue;
 
-
-    public Adresse(int id_adresse, String ville, String code_postal, String rue)
-    {
-        this.id_adresse = id_adresse;
-        this.ville = ville;
-        this.code_postal = code_postal;
-        this.rue = rue;
+    public Adresse() {
     }
 
     public String getCode_postal() {

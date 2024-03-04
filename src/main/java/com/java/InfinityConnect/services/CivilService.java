@@ -13,7 +13,7 @@ public class CivilService implements ICivilService{
     @Autowired
     private CivilDao repository;
 
-    public Civil AddEmployee(Civil civil) {
+    public Civil AddCivil(Civil civil) {
         return repository.save(civil);
     }
 
