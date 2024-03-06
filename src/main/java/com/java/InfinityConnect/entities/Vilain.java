@@ -1,14 +1,24 @@
 package com.java.InfinityConnect.entities;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "vilain")
+@PrimaryKeyJoinColumn(name = "id_civil")
 public class Vilain extends Civil{
-    private int id_hero;
+
+    //private int id_hero;
+
+    @Column(name = "pouvoir")
     private String pouvoir;
+
+    @Column(name = "point_faible")
     private String point_faible;
+
+    @Column(name = "danger")
     private String danger;
 
-    public Vilain(int id_civil, int id_hero, String pouvoir, String point_faible, String danger, String nom, String prenom, int id_adresse, String ville, String code_postal,
-            String rue, String date_naissance) {
-        super(id_civil, nom, prenom, id_adresse, date_naissance);
-        
+    public Vilain() {
     }
     
 }

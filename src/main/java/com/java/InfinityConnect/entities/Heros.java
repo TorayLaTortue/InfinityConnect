@@ -1,16 +1,24 @@
 package com.java.InfinityConnect.entities;
 
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+@Entity
+@Table(name = "hero")
+@PrimaryKeyJoinColumn(name = "id_civil")
 public class Heros extends Civil {
-    
-    private int id_hero;
+
+    //private int id_hero;
+    @Column(name = "pouvoir")
     private String pouvoir;
+    @Column(name = "point_faible")
     private String point_faible;
+    @Column(name = "score")
     private double score;
 
 
-    public Heros(int id_civil, int id_hero, String pouvoir, String point_faible, double score, String nom, String prenom, int id_adresse, String ville, String code_postal, String rue,
-            String date_naissance) {
-        super(id_civil, nom, prenom, id_adresse, date_naissance);
-            }
+    public Heros() {
+
+    }
     
 } 
