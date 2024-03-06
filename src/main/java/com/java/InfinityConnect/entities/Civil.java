@@ -18,7 +18,7 @@ public class Civil {
     private String date_naissance;
     @Column(name = "date_deces")
     private String date_deces;
-    @Column(name = "comentaire")
+    @Column(name = "commentaire")
     private ArrayList <String> commentaire;
     @Column(name = "dernier_modif")
     private String dernier_modif;
@@ -29,7 +29,7 @@ public class Civil {
 
     @OneToOne
     @JoinColumn(name = "id_adresse")
-    private Adresse adresse;
+    private int id_adresse;
 
 
 
@@ -53,4 +53,19 @@ public class Civil {
         this.prenom = prenom;
     }
 
+    public String getDate_naissance() {
+        return date_naissance;
+    }
+
+    public void setDate_naissance(String date_naissance) {
+        this.date_naissance = date_naissance;
+    }
+
+    public int getId_adresse() {
+        return id_adresse;
+    }
+
+    public void setId_adresse(int id_adresse) {
+        this.id_adresse = id_adresse;
+    }
 }

@@ -11,7 +11,7 @@ public class CivilModels {
     private int id_civil;
     private String nom;
     private String prenom;
-    private AdresseModels adresse;
+    private int id_adresse;
     private String date_naisseance;
     private String date_deces;
     private ArrayList<String> commentaire;
@@ -24,7 +24,7 @@ public class CivilModels {
         this.id_civil = id_civil;
         this.nom = nom;
         this.prenom = prenom;
-        this.adresse = adresse;
+        this.id_adresse = id_adresse;
         this.date_naissance = date_naissance;
         this.date_deces = date_deces;
         this.commentaire = commentaire;
@@ -43,5 +43,21 @@ public class CivilModels {
 
     public String getPrenom() {
         return prenom;
+    }
+
+    public String getDate_naissance() {
+        return date_naissance;
+    }
+
+    public void setDate_naisseance(String date_naisseance) {
+        this.date_naisseance = date_naisseance;
+    }
+
+    public void setId_adresse(int id_adresse) {
+        this.id_adresse = id_adresse;
+    }
+
+    public int getId_adresse() {
+        return id_adresse;
     }
 }
