@@ -9,7 +9,7 @@
     /* background-color: rgba(217, 217, 217, 0.6); */
     /* margin-left: 10%;
     margin-right: 30%; */
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(0, 255, 247);
     border-radius: 12px;
     width: 130%;
     margin-top: 4vh;
@@ -18,11 +18,18 @@
     display: flex;
 }
 
+#table
+
 #container1{
     display: flex;
     justify-content: space-around;
 }
 #incident-decla{
+    background: linear-gradient(265.25deg, rgba(61, 255, 243, 0.3) 15.21%, rgba(195, 146, 220, 0.3) 49.06%, rgba(205, 154, 43, 0.162) 104.03%);
+    border: 2px solid rgb(0, 255, 247);
+    border-radius: 12px;
+    width: 130%;
+    margin-top: 4vh;
     margin-left: 0px;
 }
 #list-button{

@@ -4,7 +4,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
-            <li><a href="pointage.php">Pointer</a></li>
+            <li><a href="pointage.php">Alertes</a></li>
             <li><a href="profil.php">Profil</a></li>
         </ul>
     </div>
