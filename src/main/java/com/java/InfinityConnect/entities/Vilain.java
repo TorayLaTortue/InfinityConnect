@@ -19,6 +19,7 @@ public class Vilain extends Civil{
     private String danger;
 
     public Vilain() {
+        super();
     }
     
 }

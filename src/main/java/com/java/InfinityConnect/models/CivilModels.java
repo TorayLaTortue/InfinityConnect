@@ -44,22 +44,6 @@ public class CivilModels {
         return prenom;
     }
 
-    public String getDate_naissance() {
-        return date_naissance;
-    }
-
-    public void setDate_naisseance(String date_naisseance) {
-        this.date_naisseance = date_naisseance;
-    }
-
-    public AdresseModels getAdresse() {
-        return adresse;
-    }
-
-    public void setAdresse(AdresseModels adresse) {
-        this.adresse = adresse;
-    }
-
     public void setId_adresse(int id_adresse) {
         this.id_adresse = id_adresse;
     }

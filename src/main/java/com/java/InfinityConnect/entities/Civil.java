@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 @Entity
 @Table(name = "civile")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Civil {
     @Id
     private int id_civil;
@@ -20,7 +21,7 @@ public class Civil {
     private String date_deces;
     @Column(name = "commentaire")
     private ArrayList <String> commentaire;
-    @Column(name = "dernier_modif")
+    @Column(name = "dernier_update")
     private String dernier_modif;
     @Column(name = "incident_declarer")
     private int incident_declarer;
@@ -31,8 +32,6 @@ public class Civil {
     @JoinColumn(name = "id_adresse", referencedColumnName = "id_adresse")
     private Adresse adresse;
 
-    @Column(name = "adresse")
-    private int id_adresse;
 
 
 
@@ -58,19 +57,18 @@ public class Civil {
         this.prenom = prenom;
     }
 
-    public String getDate_naissance() {
-        return date_naissance;
+    public Adresse getAdresse() {
+        return adresse;
     }
 
-    public void setDate_naissance(String date_naissance) {
-        this.date_naissance = date_naissance;
+    public void setAdresse(Adresse adresse) {
+        this.adresse = adresse;
     }
 
-    public int getId_adresse() {
-        return id_adresse;
-    }
-
-    public void setId_adresse(int id_adresse) {
-        this.id_adresse = id_adresse;
+    public void setIdAdresse(int id_adresse) {
+        if (adresse == null) {
+            adresse = new Adresse();
+        }
+        adresse.setId_adresse(id_adresse);
     }
 }
