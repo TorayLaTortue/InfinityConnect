@@ -9,7 +9,6 @@ public class CivilModels {
 
     private final String date_naissance;
     private int id_civil;
-
     private String nom;
     private String prenom;
     private AdresseModels adresse;

@@ -1,9 +1,6 @@
 package com.java.InfinityConnect.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 
@@ -16,13 +13,12 @@ public class Civil {
     private String nom;
     @Column(name = "prenom")
     private String prenom;
-    @Column(name = "adresse")
-    private Adresse adresse;
+
     @Column(name = "date_naissance")
     private String date_naissance;
     @Column(name = "date_deces")
     private String date_deces;
-    @Column(name = "commentaire")
+    @Column(name = "comentaire")
     private ArrayList <String> commentaire;
     @Column(name = "dernier_modif")
     private String dernier_modif;
@@ -31,8 +27,9 @@ public class Civil {
     @Column(name = "victime")
     private int victime;
 
-
-
+    @OneToOne
+    @JoinColumn(name = "id_adresse")
+    private Adresse adresse;
 
 
 

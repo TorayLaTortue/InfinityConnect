@@ -1,17 +1,23 @@
 package com.java.InfinityConnect.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 
+
+@Entity
+@Table(name = "organisation")
 public class Organisation {
     @Id
     private int id_organisation;
     @Column(name = "nom")
     private String nom;
-    @Column(name = "adresse")
+    @OneToOne
+    @JoinColumn(name = "id_adresse")
     private Adresse adresse;
+    @Column(name = "dirigeant")
+    private String Dirigeant;
+
     @Column(name = "commentaire")
     private ArrayList <String> commentaire;
     @Column(name = "date_ajout")
@@ -26,10 +32,7 @@ public class Organisation {
     @Column(name = "impliquer_mission")
     private int impliquer_mission;
 
-    public Organisation(int id, String nom, Adresse adresse) {
-        this.id_organisation = id;
-        this.nom = nom;
-        this.adresse = adresse;
+    public Organisation() {
     }
 
 
