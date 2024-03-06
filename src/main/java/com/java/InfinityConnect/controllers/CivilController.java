@@ -27,7 +27,6 @@ public class CivilController {
         Civil civil = new Civil();
         civil.setNom(newCivil.getNom());
         civil.setPrenom(newCivil.getPrenom());
-        civil.setDate_naissance(newCivil.getDate_naissance());
         civil.setId_adresse(newCivil.getId_adresse());
         return civilService.AddCivil(civil);
     }

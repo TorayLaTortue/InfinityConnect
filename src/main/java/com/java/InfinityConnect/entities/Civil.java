@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 
 @Entity
-@Table(name = "civil")
+@Table(name = "civile")
 public class Civil {
     @Id
     private int id_civil;
@@ -28,8 +28,13 @@ public class Civil {
     private int victime;
 
     @OneToOne
-    @JoinColumn(name = "id_adresse")
+    @JoinColumn(name = "id_adresse", referencedColumnName = "id_adresse")
+    private Adresse adresse;
+
+    @Column(name = "adresse")
     private int id_adresse;
+
+
 
 
 
