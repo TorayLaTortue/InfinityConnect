@@ -3,26 +3,28 @@ package com.java.InfinityConnect.entities;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 @Entity
 @Table(name = "civile")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Civil {
     @Id
-    private int id_civil;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_civile;
     @Column(name = "nom")
     private String nom;
     @Column(name = "prenom")
     private String prenom;
 
     @Column(name = "date_naissance")
-    private String date_naissance;
+    private Date date_naissance;
     @Column(name = "date_deces")
-    private String date_deces;
+    private Date date_deces;
     @Column(name = "commentaire")
     private ArrayList <String> commentaire;
     @Column(name = "dernier_update")
-    private String dernier_modif;
+    private Date dernier_modif;
     @Column(name = "incident_declarer")
     private int incident_declarer;
     @Column(name = "victime")
