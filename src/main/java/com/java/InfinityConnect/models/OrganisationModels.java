@@ -11,13 +11,13 @@ public class OrganisationModels {
     private String nom;
     private Adresse adresse;
     private String Dirigeant;
-    private ArrayList <String> commentaire;
+    private String commentaire;
     private String date_ajout;
     private String dernier_modif;
     private int incident_declarer;
     private int impliquer_mission;
 
-    public OrganisationModels(int id_organisation, String nom, Adresse adresse, String Dirigeant, ArrayList<String> commentaire, String date_ajout, String dernier_modif, int incident_declarer, int impliquer_mission) {
+    public OrganisationModels(int id_organisation, String nom, Adresse adresse, String Dirigeant, String commentaire, String date_ajout, String dernier_modif, int incident_declarer, int impliquer_mission) {
         this.id_organisation = id_organisation;
         this.nom = nom;
         this.adresse = adresse;

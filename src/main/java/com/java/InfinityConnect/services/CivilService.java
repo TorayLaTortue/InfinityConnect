@@ -2,6 +2,7 @@ package com.java.InfinityConnect.services;
 
 import com.java.InfinityConnect.daos.CivilDao;
 import com.java.InfinityConnect.entities.Civil;
+import com.java.InfinityConnect.entities.Heros;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,10 @@ public class CivilService implements ICivilService{
 
     public Civil AddCivil(Civil civil) {
         return repository.save(civil);
+    }
+
+    public Heros AddHeros(Heros heros) {
+        return repository.save(heros);
     }
 
     public List<Civil> findAll() {

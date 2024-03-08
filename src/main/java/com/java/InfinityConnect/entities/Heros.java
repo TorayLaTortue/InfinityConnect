@@ -4,11 +4,13 @@ import jakarta.persistence.*;
 
 import java.util.ArrayList;
 @Entity
-@Table(name = "hero")
-@PrimaryKeyJoinColumn(name = "id_civil")
+@Table(name = "hero", schema = "public")
+@PrimaryKeyJoinColumn(name = "id_civile")
 public class Heros extends Civil {
 
-    //private int id_hero;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_hero;
     @Column(name = "pouvoir")
     private String pouvoir;
     @Column(name = "point_faible")
@@ -17,8 +19,25 @@ public class Heros extends Civil {
     private double score;
 
 
+
+
     public Heros() {
         super();
     }
-    
-} 
+
+    public String getPouvoir() {
+        return pouvoir;
+    }
+
+    public void setPouvoir(String pouvoir) {
+        this.pouvoir = pouvoir;
+    }
+
+    public String getPoint_faible() {
+        return point_faible;
+    }
+
+    public void setPoint_faible(String point_faible) {
+        this.point_faible = point_faible;
+    }
+}
