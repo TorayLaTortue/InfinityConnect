@@ -23,7 +23,7 @@ public class Organisation {
     @Column(name = "date_ajout")
 
     private String date_ajout;
-    @Column(name = "dernier_modif")
+    @Column(name = "dernier_update")
 
     private String dernier_modif;
     @Column(name = "incident_declarer")

@@ -1,27 +1,26 @@
 package com.java.InfinityConnect.models;
 
-import com.java.InfinityConnect.entities.Adresse;
-import lombok.Setter;
-
 import java.util.ArrayList;
+import java.util.Date;
 
 public class CivilModels {
 
-    private final String date_naissance;
     private int id_civil;
+    private  int id_adresse;
     private String nom;
     private String prenom;
     private AdresseModels adresse;
-    private String date_naisseance;
-    private String date_deces;
+    private Date date_naissance;
+    private Date date_deces;
     private ArrayList<String> commentaire;
-    private String dernier_modif;
+    private Date dernier_modif;
     private int incident_declarer;
     private int victime;
 
 
-    public CivilModels(int id_civil, String nom, String prenom, AdresseModels adresse, String date_naissance, String date_deces, ArrayList<String> commentaire, String dernier_modif, int incident_declarer, int victime) {
+    public CivilModels(int id_civil, int id_adresse, String nom, String prenom, AdresseModels adresse, Date date_naissance, Date date_deces, ArrayList<String> commentaire, Date dernier_modif, int incident_declarer, int victime) {
         this.id_civil = id_civil;
+        this.id_adresse = id_adresse;
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
@@ -43,5 +42,13 @@ public class CivilModels {
 
     public String getPrenom() {
         return prenom;
+    }
+
+    public void setId_adresse(int id_adresse) {
+        this.id_adresse = id_adresse;
+    }
+
+    public int getId_adresse() {
+        return id_adresse;
     }
 }

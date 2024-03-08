@@ -18,7 +18,7 @@ public class Heros extends Civil {
 
 
     public Heros() {
-
+        super();
     }
     
 } 
