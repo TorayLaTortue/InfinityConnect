@@ -24,13 +24,7 @@ public class AdresseModels {
         this.rue = rue;
     }
 
-    public int getId_adresse() {
-        return id_adresse;
-    }
 
-    public void setId_adresse(int id_adresse) {
-        this.id_adresse = id_adresse;
-    }
 
     public String getCode_postal() {
         return code_postal;

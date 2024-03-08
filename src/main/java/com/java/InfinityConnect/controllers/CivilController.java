@@ -35,7 +35,6 @@ public class CivilController {
     @PostMapping("/newAdress")
     public Adresse newAdresse(@RequestBody AdresseModels newAdresse) {
         Adresse adresse = new Adresse();
-        adresse.setId_adresse(newAdresse.getId_adresse());
         adresse.setVille(newAdresse.getVille());
         adresse.setCode_postal(newAdresse.getCode_postal());
         adresse.setRue(newAdresse.getRue());
