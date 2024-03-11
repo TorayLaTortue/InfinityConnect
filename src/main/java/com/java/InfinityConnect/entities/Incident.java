@@ -1,13 +1,10 @@
 package com.java.InfinityConnect.entities;
 
 import jakarta.persistence.*;
-
-import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
 @Table(name = "incident")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class Incident {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

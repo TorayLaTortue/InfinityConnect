@@ -58,29 +58,29 @@ public class IncidentModels {
         this.id_civil = id_civil;
     }
 
-//    public int getId_hero() {
-//        return id_hero;
-//    }
-//
-//    public void setId_hero(int id_hero) {
-//        this.id_hero = id_hero;
-//    }
-//
-//    public int getId_vilain() {
-//        return id_vilain;
-//    }
-//
-//    public void setId_vilain(int id_vilain) {
-//        this.id_vilain = id_vilain;
-//    }
-//
-//    public int getId_organisation() {
-//        return id_organisation;
-//    }
-//
-//    public void setId_organisation(int id_organisation) {
-//        this.id_organisation = id_organisation;
-//    }
+    public int getId_hero() {
+        return id_hero;
+    }
+
+    public void setId_hero(int id_hero) {
+        this.id_hero = id_hero;
+    }
+
+    public int getId_vilain() {
+        return id_vilain;
+    }
+
+    public void setId_vilain(int id_vilain) {
+        this.id_vilain = id_vilain;
+    }
+
+    public int getId_organisation() {
+        return id_organisation;
+    }
+
+    public void setId_organisation(int id_organisation) {
+        this.id_organisation = id_organisation;
+    }
 
     public int getId_adresse() {
         return id_adresse;

@@ -50,9 +50,9 @@ public class CivilController {
     @PostMapping("/newIncident")
     public Incident newIncident(@RequestBody IncidentModels newIncident) {
         Incident incident = new Incident();
-//        incident.setHero(newIncident.getId_hero());
-//        incident.setVilain(newIncident.getId_vilain());
-//        incident.setOrganisation(newIncident.getId_organisation());
+        incident.setHero(newIncident.getId_hero());
+        incident.setVilain(newIncident.getId_vilain());
+        incident.setOrganisation(newIncident.getId_organisation());
         incident.setIdAdresse(newIncident.getId_adresse());
         incident.setType_incident(newIncident.getType_incident());
         incident.setDate(newIncident.getDate());
