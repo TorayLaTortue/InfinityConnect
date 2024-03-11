@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 @PrimaryKeyJoinColumn(name = "id_civil")
 public class Vilain extends Civil{
 
-    //private int id_hero;
+    private int id_vilain;
 
     @Column(name = "pouvoir")
     private String pouvoir;

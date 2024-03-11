@@ -2,9 +2,12 @@ package com.java.InfinityConnect.controllers;
 
 import com.java.InfinityConnect.entities.Adresse;
 import com.java.InfinityConnect.entities.Civil;
+import com.java.InfinityConnect.entities.Incident;
 import com.java.InfinityConnect.models.AdresseModels;
 import com.java.InfinityConnect.models.CivilModels;
+import com.java.InfinityConnect.models.IncidentModels;
 import com.java.InfinityConnect.services.AdresseService;
+import com.java.InfinityConnect.services.IncidentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import com.java.InfinityConnect.services.CivilService;
@@ -20,6 +23,8 @@ public class CivilController {
     private CivilService civilService;
     @Autowired
     private AdresseService adresseService;
+    @Autowired
+    private IncidentService incidentService;
 
     @Operation(summary = "Nouveau civil")
     @PostMapping("/newCivil")
@@ -40,5 +45,18 @@ public class CivilController {
         adresse.setCode_postal(newAdresse.getCode_postal());
         adresse.setRue(newAdresse.getRue());
         return adresseService.AddAdresse(adresse);
+    }
+    @Operation(summary = "Nouvelle Incident")
+    @PostMapping("/newIncident")
+    public Incident newIncident(@RequestBody IncidentModels newIncident) {
+        Incident incident = new Incident();
+//        incident.setHero(newIncident.getId_hero());
+//        incident.setVilain(newIncident.getId_vilain());
+//        incident.setOrganisation(newIncident.getId_organisation());
+        incident.setIdAdresse(newIncident.getId_adresse());
+        incident.setType_incident(newIncident.getType_incident());
+        incident.setDate(newIncident.getDate());
+        incident.setCommentaire(newIncident.getCommentaire());
+        return incidentService.AddIncident(incident);
     }
 }
