@@ -7,7 +7,6 @@ import java.util.Date;
 
 @Entity
 @Table(name = "civile")
-@Inheritance(strategy = InheritanceType.JOINED)
 public class Civil {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -67,10 +66,17 @@ public class Civil {
         this.adresse = adresse;
     }
 
+    public int getIdAdresse()
+    {
+        return adresse.getId_adresse();
+    }
+
     public void setIdAdresse(int id_adresse) {
         if (adresse == null) {
             adresse = new Adresse();
         }
         adresse.setId_adresse(id_adresse);
     }
+
+
 }

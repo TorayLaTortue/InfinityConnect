@@ -4,8 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.ArrayList;
 @Entity
-@Table(name = "hero", schema = "public")
-@PrimaryKeyJoinColumn(name = "id_civile")
+@Table(name = "hero")
 public class Heros extends Civil {
 
     @Id
