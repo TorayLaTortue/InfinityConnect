@@ -11,20 +11,14 @@
     margin-right: 30%; */
     border: 2px solid rgb(0, 0, 0);
     border-radius: 12px;
-    width: 130%;
+    width: 50%;
     margin-top: 4vh;
 }
  #profil{
     display: flex;
 }
 
-#container1{
-    display: flex;
-    justify-content: space-around;
-}
-#incident-decla{
-    margin-left: 0px;
-}
+
 #list-button{
     padding: 0%;
     list-style: none;
