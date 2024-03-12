@@ -3,11 +3,14 @@ package com.java.InfinityConnect.controllers;
 import com.java.InfinityConnect.entities.Adresse;
 import com.java.InfinityConnect.entities.Civil;
 import com.java.InfinityConnect.entities.Incident;
+import com.java.InfinityConnect.entities.Mission;
 import com.java.InfinityConnect.models.AdresseModels;
 import com.java.InfinityConnect.models.CivilModels;
 import com.java.InfinityConnect.models.IncidentModels;
+import com.java.InfinityConnect.models.MissionModels;
 import com.java.InfinityConnect.services.AdresseService;
 import com.java.InfinityConnect.services.IncidentService;
+import com.java.InfinityConnect.services.MissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import com.java.InfinityConnect.services.CivilService;
@@ -25,6 +28,8 @@ public class CivilController {
     private AdresseService adresseService;
     @Autowired
     private IncidentService incidentService;
+    @Autowired
+    private MissionService missionService;
 
     @Operation(summary = "Nouveau civil")
     @PostMapping("/newCivil")
@@ -58,5 +63,18 @@ public class CivilController {
         incident.setDate(newIncident.getDate());
         incident.setCommentaire(newIncident.getCommentaire());
         return incidentService.AddIncident(incident);
+    }
+    @Operation(summary = "Nouvelle Mission")
+    @PostMapping("/newMission")
+    public Mission newMission(@RequestBody MissionModels newMission) {
+        Mission mission = new Mission();
+        mission.setId_incident(newMission.getId_incident());
+        mission.setId_hero(newMission.getId_hero());
+        mission.setTitre(newMission.getTitre());
+        mission.setDate_debut(newMission.getDate_debut());
+        mission.setDate_fin(newMission.getDate_fin());
+        mission.setUrgence(newMission.getUrgence());
+        mission.setId_adresse(newMission.getId_adresse());
+        return missionService.AddMission(mission);
     }
 }

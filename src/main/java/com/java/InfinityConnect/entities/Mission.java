@@ -8,9 +8,8 @@ public class Mission {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_mission;
-    @OneToOne
-    @JoinColumn(name = "id_incident")
-    private Incident incident;
+    @Column(name = "id_incident")
+    private int id_incident;
     @Column(name = "id_hero")
     private int id_hero;
 
@@ -38,6 +37,14 @@ public class Mission {
 
     public void setId_mission(int id_mission) {
         this.id_mission = id_mission;
+    }
+
+    public int getId_incident() {
+        return id_incident;
+    }
+
+    public void setId_incident(int id_incident) {
+        this.id_incident = id_incident;
     }
 
     public int getId_hero() {
