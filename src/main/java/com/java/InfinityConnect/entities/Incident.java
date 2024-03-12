@@ -22,9 +22,8 @@ public class Incident {
     @Column(name = "id_organisation")
     private Integer id_organisation;
 //
-    @ManyToOne
-    @JoinColumn(name = "id_adresse", referencedColumnName = "id_adresse")
-    private Adresse adresse;
+    @Column(name = "id_adresse")
+    private int id_adresse;
     @Column(name = "type_incident")
     private String type_incident;
     @Column(name = "date")
@@ -101,12 +100,11 @@ public class Incident {
         this.commentaire = commentaire;
     }
 
-    public void setIdAdresse(int id_adresse) {
-        if (adresse == null) {
-            adresse = new Adresse();
-        }
-        adresse.setId_adresse(id_adresse);
+    public int getId_adresse() {
+        return id_adresse;
     }
 
-
+    public void setId_adresse(int id_adresse) {
+        this.id_adresse = id_adresse;
+    }
 }

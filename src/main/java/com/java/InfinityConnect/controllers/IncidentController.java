@@ -25,7 +25,7 @@ public class IncidentController {
         incident.setId_hero(newIncident.getId_hero());
         incident.setId_vilain(newIncident.getId_vilain());
         incident.setId_organisation(newIncident.getId_organisation());
-        incident.setIdAdresse(newIncident.getId_adresse());
+        incident.setId_adresse(newIncident.getId_adresse());
         incident.setType_incident(newIncident.getType_incident());
         incident.setDate(newIncident.getDate());
         incident.setCommentaire(newIncident.getCommentaire());
