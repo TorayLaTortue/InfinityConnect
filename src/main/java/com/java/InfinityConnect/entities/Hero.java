@@ -2,10 +2,9 @@ package com.java.InfinityConnect.entities;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 @Entity
 @Table(name = "hero")
-public class Heros extends Civil {
+public class Hero extends Civile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,8 +19,16 @@ public class Heros extends Civil {
 
 
 
-    public Heros() {
+    public Hero() {
         super();
+    }
+
+    public int getId_hero() {
+        return id_hero;
+    }
+
+    public void setId_hero(int id_hero) {
+        this.id_hero = id_hero;
     }
 
     public String getPouvoir() {
@@ -38,5 +45,13 @@ public class Heros extends Civil {
 
     public void setPoint_faible(String point_faible) {
         this.point_faible = point_faible;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public void setScore(double score) {
+        this.score = score;
     }
 }

@@ -1,9 +1,8 @@
 package com.java.InfinityConnect.models;
 
-import java.util.ArrayList;
 import java.util.Date;
 
-public class CivilModels {
+public class CivileModels {
 
     private int id_civile;
     private  int id_adresse;
@@ -18,7 +17,7 @@ public class CivilModels {
     private int victime;
 
 
-    public CivilModels(int id_civil, int id_adresse, String nom, String prenom, AdresseModels adresse, Date date_naissance, Date date_deces, String commentaire, Date dernier_modif, int incident_declarer, int victime) {
+    public CivileModels(int id_civil, int id_adresse, String nom, String prenom, AdresseModels adresse, Date date_naissance, Date date_deces, String commentaire, Date dernier_modif, int incident_declarer, int victime) {
         this.id_civile = id_civil;
         this.id_adresse = id_adresse;
         this.nom = nom;

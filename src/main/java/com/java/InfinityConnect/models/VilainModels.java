@@ -1,14 +1,8 @@
 package com.java.InfinityConnect.models;
 
-import com.java.InfinityConnect.entities.Adresse;
-import jakarta.persistence.Column;
-import jakarta.persistence.Id;
-
-import java.time.LocalDate; // Assuming you use LocalDate for date_naissance and date_deces
-import java.util.ArrayList;
 import java.util.Date;
 
-public class VilainModels extends CivilModels {
+public class VilainModels extends CivileModels {
 
     private int id_hero;
     private String pouvoir;

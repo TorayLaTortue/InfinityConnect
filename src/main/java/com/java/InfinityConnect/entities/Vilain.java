@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "vilain")
-@PrimaryKeyJoinColumn(name = "id_civil")
-public class Vilain extends Civil{
+public class Vilain extends Civile {
 
-    //private int id_hero;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id_vilain;
 
     @Column(name = "pouvoir")
     private String pouvoir;

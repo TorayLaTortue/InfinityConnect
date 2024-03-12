@@ -2,12 +2,12 @@ package com.java.InfinityConnect.entities;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
 @Table(name = "civile")
-public class Civil {
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public class Civile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_civile;
@@ -29,8 +29,7 @@ public class Civil {
     @Column(name = "victime")
     private int victime;
 
-    @OneToOne
-    @JoinColumn(name = "id_adresse", referencedColumnName = "id_adresse")
+    @OneToOne(mappedBy = "civile", cascade = CascadeType.ALL, orphanRemoval = true)
     private Adresse adresse;
 
 
@@ -38,8 +37,12 @@ public class Civil {
 
 
 
-    public Civil() {
+    public Civile() {
 
+    }
+
+    public int getId_civile() {
+        return id_civile;
     }
 
     public String getNom() {
