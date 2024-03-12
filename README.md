@@ -4,7 +4,7 @@
 Requete SQL pour construire la base de donée (Crée avec pgAdmin 4)
 
 
-// CREATE TABLE IF NOT EXISTS public.adresse
+SQL // CREATE TABLE IF NOT EXISTS public.adresse
 (
     id_adresse integer NOT NULL DEFAULT nextval('adresse_id_adresse_seq'::regclass),
     ville character(100) COLLATE pg_catalog."default",
