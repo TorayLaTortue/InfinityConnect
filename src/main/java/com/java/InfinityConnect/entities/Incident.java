@@ -10,18 +10,17 @@ public class Incident {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_incident;
 
-    @ManyToOne
-    @JoinColumn(name = "id_civile", referencedColumnName = "id_civile")
-    private Civil civil;
+    @Column(name = "id_civile")
+    private Integer id_civil;
 
     @Column(name = "id_hero")
-    private int id_hero;
+    private Integer id_hero;
 
     @Column(name = "id_vilain")
-    private int id_vilain;
+    private Integer id_vilain;
 
     @Column(name = "id_organisation")
-    private int id_organisation;
+    private Integer id_organisation;
 //
     @ManyToOne
     @JoinColumn(name = "id_adresse", referencedColumnName = "id_adresse")
@@ -37,6 +36,7 @@ public class Incident {
 
     }
 
+
     public int getId_incident() {
         return id_incident;
     }
@@ -45,47 +45,36 @@ public class Incident {
         this.id_incident = id_incident;
     }
 
-    public Civil getCivil() {
-        return civil;
+    public Integer getId_civil() {
+        return id_civil;
     }
 
-    public void setCivil(Civil civil) {
-        this.civil = civil;
+    public void setId_civil(Integer id_civil) {
+        this.id_civil = id_civil;
     }
 
-    public int getHero() {
+    public Integer getId_hero() {
         return id_hero;
     }
 
-    public void setHero(int hero) {
+    public void setId_hero(Integer id_hero) {
         this.id_hero = id_hero;
     }
 
-    public int getVilain() {
+    public Integer getId_vilain() {
         return id_vilain;
     }
 
-    public void setVilain(int vilain) {
+    public void setId_vilain(Integer id_vilain) {
         this.id_vilain = id_vilain;
     }
 
-    public int getOrganisation() {
+    public Integer getId_organisation() {
         return id_organisation;
     }
 
-    public void setOrganisation(int id_organisation) {
+    public void setId_organisation(Integer id_organisation) {
         this.id_organisation = id_organisation;
-    }
-
-    public Adresse getAdresse() {
-        return adresse;
-    }
-
-    public void setIdAdresse(int id_adresse) {
-        if (adresse == null) {
-            adresse = new Adresse();
-        }
-        adresse.setId_adresse(id_adresse);
     }
 
     public String getType_incident() {
@@ -111,4 +100,13 @@ public class Incident {
     public void setCommentaire(String commentaire) {
         this.commentaire = commentaire;
     }
+
+    public void setIdAdresse(int id_adresse) {
+        if (adresse == null) {
+            adresse = new Adresse();
+        }
+        adresse.setId_adresse(id_adresse);
+    }
+
+
 }

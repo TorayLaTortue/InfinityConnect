@@ -9,34 +9,29 @@ import java.util.Date;
 public class IncidentModels {
 
     private int id_incident;
-    private  int id_civil;
-    private  int id_hero;
-    private  int id_vilain;
-    private  int id_organisation;
+    private  Integer id_civil;
+    private  Integer id_hero;
+    private  Integer id_vilain;
+    private  Integer id_organisation;
     private  int id_adresse;
 
-    private CivilModels civil;
-    private HerosModels hero;
-    private VilainModels vilain;
-    private OrganisationModels organisation;
-    private AdresseModels adresse;
+//    private CivilModels civil;
+//    private HerosModels hero;
+//    private VilainModels vilain;
+//    private OrganisationModels organisation;
+//    private AdresseModels adresse;
     private String type_incident;
     private Date date;
     private String commentaire;
 
 
-    public IncidentModels(int id_incident, int id_civil, int id_hero, int id_vilain, int id_organisation, int id_adresse, CivilModels civil, HerosModels hero, VilainModels vilain, OrganisationModels organisation, AdresseModels adresse, String type_incident, Date date, String commentaire) {
+    public IncidentModels(int id_incident, int id_civil, Integer id_hero, Integer id_vilain, Integer id_organisation, int id_adresse, String type_incident, Date date, String commentaire) {
         this.id_incident = id_incident;
         this.id_civil = id_civil;
         this.id_hero = id_hero;
         this.id_vilain = id_vilain;
         this.id_organisation = id_organisation;
         this.id_adresse = id_adresse;
-        this.civil = civil;
-        this.hero = hero;
-        this.vilain = vilain;
-        this.organisation = organisation;
-        this.adresse = adresse;
         this.type_incident = type_incident;
         this.date = date;
         this.commentaire = commentaire;
@@ -50,35 +45,35 @@ public class IncidentModels {
         this.id_incident = id_incident;
     }
 
-    public int getId_civil() {
+    public Integer getId_civil() {
         return id_civil;
     }
 
-    public void setId_civil(int id_civil) {
+    public void setId_civil(Integer id_civil) {
         this.id_civil = id_civil;
     }
 
-    public int getId_hero() {
+    public Integer getId_hero() {
         return id_hero;
     }
 
-    public void setId_hero(int id_hero) {
+    public void setId_hero(Integer id_hero) {
         this.id_hero = id_hero;
     }
 
-    public int getId_vilain() {
+    public Integer getId_vilain() {
         return id_vilain;
     }
 
-    public void setId_vilain(int id_vilain) {
+    public void setId_vilain(Integer id_vilain) {
         this.id_vilain = id_vilain;
     }
 
-    public int getId_organisation() {
+    public Integer getId_organisation() {
         return id_organisation;
     }
 
-    public void setId_organisation(int id_organisation) {
+    public void setId_organisation(Integer id_organisation) {
         this.id_organisation = id_organisation;
     }
 

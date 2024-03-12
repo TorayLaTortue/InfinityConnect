@@ -20,16 +20,15 @@ import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 @RestController
 public class CivilController {
     @Autowired
     private CivilService civilService;
     @Autowired
     private AdresseService adresseService;
-    @Autowired
-    private IncidentService incidentService;
-    @Autowired
-    private MissionService missionService;
+
+
 
     @Operation(summary = "Nouveau civil")
     @PostMapping("/newCivil")
@@ -51,30 +50,5 @@ public class CivilController {
         adresse.setRue(newAdresse.getRue());
         return adresseService.AddAdresse(adresse);
     }
-    @Operation(summary = "Nouvelle Incident")
-    @PostMapping("/newIncident")
-    public Incident newIncident(@RequestBody IncidentModels newIncident) {
-        Incident incident = new Incident();
-        incident.setHero(newIncident.getId_hero());
-        incident.setVilain(newIncident.getId_vilain());
-        incident.setOrganisation(newIncident.getId_organisation());
-        incident.setIdAdresse(newIncident.getId_adresse());
-        incident.setType_incident(newIncident.getType_incident());
-        incident.setDate(newIncident.getDate());
-        incident.setCommentaire(newIncident.getCommentaire());
-        return incidentService.AddIncident(incident);
-    }
-    @Operation(summary = "Nouvelle Mission")
-    @PostMapping("/newMission")
-    public Mission newMission(@RequestBody MissionModels newMission) {
-        Mission mission = new Mission();
-        mission.setId_incident(newMission.getId_incident());
-        mission.setId_hero(newMission.getId_hero());
-        mission.setTitre(newMission.getTitre());
-        mission.setDate_debut(newMission.getDate_debut());
-        mission.setDate_fin(newMission.getDate_fin());
-        mission.setUrgence(newMission.getUrgence());
-        mission.setId_adresse(newMission.getId_adresse());
-        return missionService.AddMission(mission);
-    }
+
 }
