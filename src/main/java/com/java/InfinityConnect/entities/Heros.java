@@ -7,8 +7,7 @@ import java.util.ArrayList;
 @Table(name = "hero")
 @PrimaryKeyJoinColumn(name = "id_civil")
 public class Heros extends Civil {
-
-    //private int id_hero;
+    private int id_hero;
     @Column(name = "pouvoir")
     private String pouvoir;
     @Column(name = "point_faible")

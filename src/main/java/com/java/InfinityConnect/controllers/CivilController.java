@@ -2,9 +2,15 @@ package com.java.InfinityConnect.controllers;
 
 import com.java.InfinityConnect.entities.Adresse;
 import com.java.InfinityConnect.entities.Civil;
+import com.java.InfinityConnect.entities.Incident;
+import com.java.InfinityConnect.entities.Mission;
 import com.java.InfinityConnect.models.AdresseModels;
 import com.java.InfinityConnect.models.CivilModels;
+import com.java.InfinityConnect.models.IncidentModels;
+import com.java.InfinityConnect.models.MissionModels;
 import com.java.InfinityConnect.services.AdresseService;
+import com.java.InfinityConnect.services.IncidentService;
+import com.java.InfinityConnect.services.MissionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import com.java.InfinityConnect.services.CivilService;
@@ -14,12 +20,15 @@ import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 @RestController
 public class CivilController {
     @Autowired
     private CivilService civilService;
     @Autowired
     private AdresseService adresseService;
+
+
 
     @Operation(summary = "Nouveau civil")
     @PostMapping("/newCivil")
@@ -41,4 +50,5 @@ public class CivilController {
         adresse.setRue(newAdresse.getRue());
         return adresseService.AddAdresse(adresse);
     }
+
 }
