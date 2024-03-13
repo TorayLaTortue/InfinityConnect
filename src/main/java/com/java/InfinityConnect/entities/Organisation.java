@@ -19,7 +19,7 @@ public class Organisation {
     private String Dirigeant;
 
     @Column(name = "commentaire")
-    private ArrayList <String> commentaire;
+    private String commentaire;
     @Column(name = "date_ajout")
 
     private String date_ajout;
