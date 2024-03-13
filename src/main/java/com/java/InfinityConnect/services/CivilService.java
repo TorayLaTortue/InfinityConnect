@@ -1,7 +1,7 @@
 package com.java.InfinityConnect.services;
 
-import com.java.InfinityConnect.daos.CivilDao;
-import com.java.InfinityConnect.entities.Civil;
+import com.java.InfinityConnect.daos.CivileDao;
+import com.java.InfinityConnect.entities.Civile;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,17 +11,17 @@ import java.util.Optional;
 @Service
 public class CivilService implements ICivilService{
     @Autowired
-    private CivilDao repository;
+    private CivileDao repository;
 
-    public Civil AddCivil(Civil civil) {
+    public Civile AddCivil(Civile civil) {
         return repository.save(civil);
     }
 
-    public List<Civil> findAll() {
+    public List<Civile> findAll() {
         return repository.findAll();
     }
 
-    public Optional<Civil> findById(long id_civil) {
+    public Optional<Civile> findById(long id_civil) {
         return repository.findById(id_civil);
     }
 }

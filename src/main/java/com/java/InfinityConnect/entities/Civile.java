@@ -8,7 +8,7 @@ import java.util.Date;
 @Entity
 @Table(name = "civile")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Civil {
+public class Civile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_civile;
@@ -39,7 +39,7 @@ public class Civil {
 
 
 
-    public Civil() {
+    public Civile() {
 
     }
 

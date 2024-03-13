@@ -1,21 +1,20 @@
 package com.java.InfinityConnect.controllers;
 
 import com.java.InfinityConnect.entities.Adresse;
-import com.java.InfinityConnect.entities.Civil;
+import com.java.InfinityConnect.entities.Civile;
 import com.java.InfinityConnect.models.AdresseModels;
-import com.java.InfinityConnect.models.CivilModels;
+import com.java.InfinityConnect.models.CivileModels;
 import com.java.InfinityConnect.services.AdresseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import com.java.InfinityConnect.services.CivilService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.Operation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Optional;
 
 @RestController
-public class CivilController {
+public class CivileController {
     @Autowired
     private CivilService civilService;
     @Autowired
@@ -23,8 +22,8 @@ public class CivilController {
 
     @Operation(summary = "Nouveau civil")
     @PostMapping("/newCivil")
-    public Civil newCivil(@RequestBody CivilModels newCivil) {
-        Civil civil = new Civil();
+    public Civile newCivil(@RequestBody CivileModels newCivil) {
+        Civile civil = new Civile();
         civil.setNom(newCivil.getNom());
         civil.setPrenom(newCivil.getPrenom());
         civil.setIdAdresse(newCivil.getId_adresse());
@@ -41,4 +40,17 @@ public class CivilController {
         adresse.setRue(newAdresse.getRue());
         return adresseService.AddAdresse(adresse);
     }
+
+    @Operation(summary = "Obtenir une adresse par ID")
+    @GetMapping("/adresse/{id}")
+    public ResponseEntity<?> getAdresseById(@PathVariable Long id) {
+        Optional<Adresse> optionalAdresse = adresseService.findById(id);
+        if (optionalAdresse.isPresent()) {
+            Adresse adresse = optionalAdresse.get();
+            return ResponseEntity.ok(adresse);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }

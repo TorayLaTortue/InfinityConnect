@@ -2,11 +2,10 @@ package com.java.InfinityConnect.entities;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 @Entity
 @Table(name = "hero")
 @PrimaryKeyJoinColumn(name = "id_civil")
-public class Heros extends Civil {
+public class Hero extends Civile {
 
     //private int id_hero;
     @Column(name = "pouvoir")
@@ -17,7 +16,7 @@ public class Heros extends Civil {
     private double score;
 
 
-    public Heros() {
+    public Hero() {
         super();
     }
     
