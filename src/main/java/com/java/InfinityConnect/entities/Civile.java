@@ -22,7 +22,7 @@ public class Civile {
     @Column(name = "date_deces")
     private Date date_deces;
     @Column(name = "commentaire")
-    private ArrayList <String> commentaire;
+    private String commentaire;
     @Column(name = "dernier_update")
     private Date dernier_modif;
     @Column(name = "incident_declarer")

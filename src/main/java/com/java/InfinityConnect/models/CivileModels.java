@@ -6,7 +6,7 @@ import java.util.Date;
 public class CivileModels {
 
     private int id_civil;
-    private  int id_adresse;
+    private int id_adresse;
     private String nom;
     private String prenom;
     private AdresseModels adresse;
