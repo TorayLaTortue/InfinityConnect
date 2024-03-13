@@ -73,4 +73,12 @@ public class Civile {
         }
         adresse.setId_adresse(id_adresse);
     }
+
+    public void setId_civile(int id_civile) {
+        this.id_civile = id_civile;
+    }
+
+    public int getId_civile() {
+        return id_civile;
+    }
 }

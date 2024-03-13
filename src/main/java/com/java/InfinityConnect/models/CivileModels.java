@@ -5,7 +5,7 @@ import java.util.Date;
 
 public class CivileModels {
 
-    private int id_civil;
+    private int id_civile;
     private int id_adresse;
     private String nom;
     private String prenom;
@@ -18,8 +18,8 @@ public class CivileModels {
     private int victime;
 
 
-    public CivileModels(int id_civil, int id_adresse, String nom, String prenom, AdresseModels adresse, Date date_naissance, Date date_deces, ArrayList<String> commentaire, Date dernier_modif, int incident_declarer, int victime) {
-        this.id_civil = id_civil;
+    public CivileModels(int id_civile, int id_adresse, String nom, String prenom, AdresseModels adresse, Date date_naissance, Date date_deces, ArrayList<String> commentaire, Date dernier_modif, int incident_declarer, int victime) {
+        this.id_civile = id_civile;
         this.id_adresse = id_adresse;
         this.nom = nom;
         this.prenom = prenom;
