@@ -1,8 +1,8 @@
 package com.java.InfinityConnect.services;
 
-import com.java.InfinityConnect.daos.CivilDao;
+import com.java.InfinityConnect.daos.CivileDao;
 import com.java.InfinityConnect.daos.IncidentDao;
-import com.java.InfinityConnect.entities.Civil;
+import com.java.InfinityConnect.entities.Civile;
 import com.java.InfinityConnect.entities.Incident;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

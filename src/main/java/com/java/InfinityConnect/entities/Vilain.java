@@ -4,9 +4,10 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "vilain")
-@PrimaryKeyJoinColumn(name = "id_civil")
-public class Vilain extends Civile {
+//@PrimaryKeyJoinColumn(name = "id_civile")
+public class Vilain {
 
+    @Id
     private int id_vilain;
 
     @Column(name = "pouvoir")
