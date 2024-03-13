@@ -12,15 +12,15 @@ import com.java.InfinityConnect.services.AdresseService;
 import com.java.InfinityConnect.services.IncidentService;
 import com.java.InfinityConnect.services.MissionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import com.java.InfinityConnect.services.CivilService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.Operation;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
+
 @RestController
 public class CivilController {
     @Autowired
@@ -36,7 +36,7 @@ public class CivilController {
         Civil civil = new Civil();
         civil.setNom(newCivil.getNom());
         civil.setPrenom(newCivil.getPrenom());
-        civil.setIdAdresse(newCivil.getId_adresse());
+        civil.setId_adresse(newCivil.getId_adresse());
         return civilService.AddCivil(civil);
     }
 
@@ -50,5 +50,11 @@ public class CivilController {
         adresse.setRue(newAdresse.getRue());
         return adresseService.AddAdresse(adresse);
     }
+    @GetMapping("/profil/{id}")
+    public Civil getCivilById(@PathVariable long id) {
+        return civilService.findById(id);
+    }
+
+
 
 }

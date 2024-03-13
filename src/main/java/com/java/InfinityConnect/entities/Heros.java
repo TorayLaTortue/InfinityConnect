@@ -5,8 +5,10 @@ import jakarta.persistence.*;
 import java.util.ArrayList;
 @Entity
 @Table(name = "hero")
-@PrimaryKeyJoinColumn(name = "id_civil")
-public class Heros extends Civil {
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Heros {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_hero;
     @Column(name = "pouvoir")
     private String pouvoir;

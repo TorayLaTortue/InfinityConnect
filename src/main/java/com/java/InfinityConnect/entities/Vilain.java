@@ -4,9 +4,11 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "vilain")
-@PrimaryKeyJoinColumn(name = "id_civil")
-public class Vilain extends Civil{
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Vilain{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id_vilain;
 
     @Column(name = "pouvoir")
@@ -19,7 +21,7 @@ public class Vilain extends Civil{
     private String danger;
 
     public Vilain() {
-        super();
+
     }
     
 }

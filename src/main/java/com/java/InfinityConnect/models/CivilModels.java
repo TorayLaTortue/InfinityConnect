@@ -9,7 +9,6 @@ public class CivilModels {
     private int id_adresse;
     private String nom;
     private String prenom;
-    private AdresseModels adresse;
     private Date date_naissance;
     private Date date_deces;
     private ArrayList<String> commentaire;
@@ -18,12 +17,11 @@ public class CivilModels {
     private int victime;
 
 
-    public CivilModels(int id_civil, int id_adresse, String nom, String prenom, AdresseModels adresse, Date date_naissance, Date date_deces, ArrayList<String> commentaire, Date dernier_modif, int incident_declarer, int victime) {
+    public CivilModels(int id_civil, int id_adresse, String nom, String prenom, Date date_naissance, Date date_deces, ArrayList<String> commentaire, Date dernier_modif, int incident_declarer, int victime) {
         this.id_civil = id_civil;
         this.id_adresse = id_adresse;
         this.nom = nom;
         this.prenom = prenom;
-        this.adresse = adresse;
         this.date_naissance = date_naissance;
         this.date_deces = date_deces;
         this.commentaire = commentaire;

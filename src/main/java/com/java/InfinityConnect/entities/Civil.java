@@ -30,9 +30,8 @@ public class Civil {
     @Column(name = "victime")
     private int victime;
 
-    @OneToOne
-    @JoinColumn(name = "id_adresse", referencedColumnName = "id_adresse")
-    private Adresse adresse;
+    @Column(name = "id_adresse")
+    private int id_adresse;
 
 
 
@@ -41,6 +40,14 @@ public class Civil {
 
     public Civil() {
 
+    }
+
+    public int getId_civile() {
+        return id_civile;
+    }
+
+    public void setId_civile(int id_civile) {
+        this.id_civile = id_civile;
     }
 
     public String getNom() {
@@ -59,18 +66,59 @@ public class Civil {
         this.prenom = prenom;
     }
 
-    public Adresse getAdresse() {
-        return adresse;
+    public Date getDate_naissance() {
+        return date_naissance;
     }
 
-    public void setAdresse(Adresse adresse) {
-        this.adresse = adresse;
+    public void setDate_naissance(Date date_naissance) {
+        this.date_naissance = date_naissance;
     }
 
-    public void setIdAdresse(int id_adresse) {
-        if (adresse == null) {
-            adresse = new Adresse();
-        }
-        adresse.setId_adresse(id_adresse);
+    public Date getDate_deces() {
+        return date_deces;
+    }
+
+    public void setDate_deces(Date date_deces) {
+        this.date_deces = date_deces;
+    }
+
+    public String getCommentaire() {
+        return commentaire;
+    }
+
+    public void setCommentaire(String commentaire) {
+        this.commentaire = commentaire;
+    }
+
+    public Date getDernier_modif() {
+        return dernier_modif;
+    }
+
+    public void setDernier_modif(Date dernier_modif) {
+        this.dernier_modif = dernier_modif;
+    }
+
+    public int getIncident_declarer() {
+        return incident_declarer;
+    }
+
+    public void setIncident_declarer(int incident_declarer) {
+        this.incident_declarer = incident_declarer;
+    }
+
+    public int getVictime() {
+        return victime;
+    }
+
+    public void setVictime(int victime) {
+        this.victime = victime;
+    }
+
+    public int getId_adresse() {
+        return id_adresse;
+    }
+
+    public void setId_adresse(int id_adresse) {
+        this.id_adresse = id_adresse;
     }
 }

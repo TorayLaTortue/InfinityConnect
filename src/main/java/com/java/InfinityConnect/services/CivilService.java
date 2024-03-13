@@ -21,8 +21,10 @@ public class CivilService implements ICivilService{
         return repository.findAll();
     }
 
-    public Optional<Civil> findById(long id_civil) {
-        return repository.findById(id_civil);
+    public Civil findById(long id_civil) {
+        Optional<Civil> optionalCivil = repository.findById(id_civil);
+        return optionalCivil.orElse(null); // Retourne null si l'Optional est vide
     }
+
 }
 
