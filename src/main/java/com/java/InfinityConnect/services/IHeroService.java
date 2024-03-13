@@ -1,6 +1,4 @@
 package com.java.InfinityConnect.services;
 
-
-public interface ICivilService {
-
+public interface IHeroService {
 }

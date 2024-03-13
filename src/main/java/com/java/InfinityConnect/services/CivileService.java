@@ -9,20 +9,20 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CivilService implements ICivilService{
+public class CivileService implements ICivileService {
     @Autowired
     private CivileDao repository;
 
-    public Civile AddCivil(Civile civil) {
-        return repository.save(civil);
+    public Civile AddCivil(Civile civile) {
+        return repository.save(civile);
     }
 
     public List<Civile> findAll() {
         return repository.findAll();
     }
 
-    public Optional<Civile> findById(long id_civil) {
-        return repository.findById(id_civil);
+    public Optional<Civile> findById(long id_civile) {
+        return repository.findById(id_civile);
     }
 }
 

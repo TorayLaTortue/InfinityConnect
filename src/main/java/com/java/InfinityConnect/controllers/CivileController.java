@@ -6,7 +6,7 @@ import com.java.InfinityConnect.models.AdresseModels;
 import com.java.InfinityConnect.models.CivileModels;
 import com.java.InfinityConnect.services.AdresseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import com.java.InfinityConnect.services.CivilService;
+import com.java.InfinityConnect.services.CivileService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.Operation;
@@ -16,7 +16,7 @@ import java.util.Optional;
 @RestController
 public class CivileController {
     @Autowired
-    private CivilService civilService;
+    private CivileService civilService;
     @Autowired
     private AdresseService adresseService;
 
@@ -52,5 +52,20 @@ public class CivileController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @Operation(summary = "Obtenir un civil par ID")
+    @GetMapping("/civile/{id}")
+    public ResponseEntity<?> getCivilById(@PathVariable Long id) {
+        Optional<Civile> optionalCivile = civilService.findById(id);
+        if (optionalCivile.isPresent()) {
+            Civile civile = optionalCivile.get();
+            return ResponseEntity.ok(civile);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+
+
 
 }

@@ -1,6 +1,6 @@
 package com.java.InfinityConnect.models;
 
-import com.java.InfinityConnect.entities.Heros;
+import com.java.InfinityConnect.entities.Hero;
 import com.java.InfinityConnect.entities.Vilain;
 
 import java.util.ArrayList;
