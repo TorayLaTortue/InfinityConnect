@@ -69,7 +69,7 @@ public class Hero  {
         this.score = score;
     }
 
-    public void setIdAdresse(int id_civile) {
+    public void setIdCivile(int id_civile) {
         if (civile == null) {
             civile = new Civile();
         }

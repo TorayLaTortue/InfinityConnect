@@ -33,6 +33,7 @@ public class HeroController {
         hero.setNom(newHero.getNom());
         hero.setPouvoir(newHero.getPouvoir());
         hero.setPoint_faible(newHero.getPoint_faible());
+        hero.setIdCivile(newHero.getId_civile());
         return heroService.AddHero(hero);
     }
 
