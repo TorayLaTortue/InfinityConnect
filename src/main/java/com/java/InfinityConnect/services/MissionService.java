@@ -24,5 +24,10 @@ public class MissionService implements IMissionService{
     public Optional<Mission> findById(long id_mission) {
         return repository.findById(id_mission);
     }
+    public List<Mission> findTop5ByOrderByDateDebutDesc() {
+        return repository.findTop5ByOrderByDateDebutDesc();
+    }
+
+
 }
 

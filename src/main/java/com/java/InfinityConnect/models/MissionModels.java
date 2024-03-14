@@ -12,18 +12,18 @@ public class MissionModels {
     private int id_incident;
     private int id_hero;
     private String titre;
-    private Date date_debut;
+    private Date dateDebut;
     private Date date_fin;
     private String urgence ;
     private int id_adresse;
 
 
-    public MissionModels(int id_mission, int id_incident, int id_hero, String titre, Date date_debut, Date date_fin, String urgence, int id_adresse) {
+    public MissionModels(int id_mission, int id_incident, int id_hero, String titre, Date dateDebut, Date date_fin, String urgence, int id_adresse) {
         this.id_mission = id_mission;
         this.id_incident = id_incident;
         this.id_hero = id_hero;
         this.titre = titre;
-        this.date_debut = date_debut;
+        dateDebut = dateDebut;
         this.date_fin = date_fin;
         this.urgence = urgence;
         this.id_adresse = id_adresse;
@@ -61,12 +61,12 @@ public class MissionModels {
         this.titre = titre;
     }
 
-    public Date getDate_debut() {
-        return date_debut;
+    public Date getDateDebut() {
+        return dateDebut;
     }
 
-    public void setDate_debut(Date date_debut) {
-        this.date_debut = date_debut;
+    public void setDateDebut(Date dateDebut) {
+        dateDebut = dateDebut;
     }
 
     public Date getDate_fin() {

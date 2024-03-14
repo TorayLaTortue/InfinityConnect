@@ -20,7 +20,7 @@ import io.swagger.v3.oas.annotations.Operation;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin(origins = "*")
 @RestController
 public class CivilController {
     @Autowired
@@ -53,6 +53,11 @@ public class CivilController {
     @GetMapping("/profil/{id}")
     public Civil getCivilById(@PathVariable long id) {
         return civilService.findById(id);
+    }
+
+    @GetMapping("/adresse/{id}")
+    public Adresse getAdresseById(@PathVariable long id) {
+        return adresseService.findById(id);
     }
 
 
