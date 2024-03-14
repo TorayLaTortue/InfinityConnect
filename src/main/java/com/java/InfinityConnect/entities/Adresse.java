@@ -20,6 +20,9 @@ public class Adresse {
 
     @Column(name = "rue")
     private String rue;
+    @Column(name = "numero")
+    private int numero;
+
 
     public Adresse() {
     }

@@ -1,7 +1,7 @@
 package com.java.InfinityConnect.services;
 
-import com.java.InfinityConnect.daos.HeroDao;
-import com.java.InfinityConnect.entities.Hero;
+import com.java.InfinityConnect.daos.HerosDao;
+import com.java.InfinityConnect.entities.Heros;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,21 +9,23 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class HeroService implements IHeroService {
+public class HeroService implements IHeroService{
     @Autowired
-    private HeroDao repository;
+    private HerosDao repository;
 
-    public Hero AddHero(Hero hero) {
+    public Heros AddHero(Heros hero) {
         return repository.save(hero);
     }
 
-    public List<Hero> findAll() {
+    public List<Heros> findAll() {
         return repository.findAll();
     }
 
-    public Optional<Hero> findById(long id_hero) {
-        return repository.findById(id_hero);
+    public Heros findById(long id_hero) {
+        Optional<Heros> optionalHero = repository.findById(id_hero);
+        return optionalHero.orElse(null);
     }
-}
 
+
+}
 

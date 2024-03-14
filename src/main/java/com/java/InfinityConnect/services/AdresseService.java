@@ -2,6 +2,7 @@ package com.java.InfinityConnect.services;
 
 import com.java.InfinityConnect.daos.AdresseDao;
 import com.java.InfinityConnect.entities.Adresse;
+import com.java.InfinityConnect.entities.Civil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +22,9 @@ public class AdresseService implements IAdresseService{
         return repository.findAll();
     }
 
-    public Optional<Adresse> findById(long id_adresse) {
-        return repository.findById(id_adresse);
+    public Adresse findById(long id_adresse) {
+        Optional<Adresse> optionalAdresse = repository.findById(id_adresse);
+        return optionalAdresse.orElse(null);
     }
 }
 

@@ -14,14 +14,16 @@ public class AdresseModels {
     private String code_postal;
 
     private String rue;
+    private int numero;
 
 
-    public AdresseModels(int id_adresse, String ville, String code_postal, String rue)
+    public AdresseModels(int id_adresse, String ville, String code_postal, String rue, int numero)
     {
         this.id_adresse = id_adresse;
         this.ville = ville;
         this.code_postal = code_postal;
         this.rue = rue;
+        this.numero = numero;
     }
 
     public int getId_adresse() {
@@ -54,5 +56,13 @@ public class AdresseModels {
 
     public void setVille(String ville) {
         this.ville = ville;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
     }
 }
