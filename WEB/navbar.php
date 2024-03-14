@@ -3,9 +3,9 @@
             &#9776; 
         </div>
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="pointage.php">Pointer</a></li>
-            <li><a href="profil.php">Profil</a></li>
+            <li><a href="home_admin.php">Home</a></li>
+            <li><a href="mission.php">Mission</a></li>
+            <li><a href="#">Héro</a></li>
         </ul>
     </div>
 
