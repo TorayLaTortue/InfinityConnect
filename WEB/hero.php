@@ -35,6 +35,7 @@
     ?>
 
     <script src="slidebar.js"></script>
+</main>
 
 </body>
 
