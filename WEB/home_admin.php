@@ -110,7 +110,7 @@
 
         <?php
 
-        $url_mission = 'http://localhost:8080/missions';
+        $url_mission = 'http://localhost:8080/last5Missions';
         $mission = file_get_contents($url_mission);
         $mission_details = json_decode($mission, true);
 

@@ -51,7 +51,7 @@
                 foreach ($incident_details as $incident) {
                     $numero1 = $numero1 + 1;
                     echo '<tr>';
-                    echo '<td><a href="#" onclick="openModal(' . $incident["id_incident"] . ', ' . $incident["id_adresse"] . ')">Voir détails</a></td>';
+                    echo '<td><a href="#" onclick="openModal(' . $incident["id_incident"] . ', ' . $incident["id_adresse"] . ')">Crée une mission</a></td>';
                     echo '<td>' . ($incident['id_civil'] ? $incident['id_civil'] : 'null') . '<br>' . '</td>';
                     echo '<td>' . '<a href="hero.php?id_hero=' . $incident["id_hero"] . '">' . ($incident['id_hero'] ? $incident['id_hero'] : 'null') . '<br>' . '</td>';
                     echo '<td>' . ($incident['id_vilain'] ? $incident['id_vilain'] : 'null') . '<br>' . '</td>';
@@ -70,7 +70,7 @@
 
     </section>
 
-    <button id="openModalBtn">Open Modal</button>
+
 
     <div id="myModal" class="modal">
         <div class="modal-content">
@@ -154,54 +154,57 @@
             modal.style.display = "block";
         }        
     </script>
-<script>
-    // Gestionnaire d'événement pour soumettre le formulaire
-    document.querySelector("#missionForm").addEventListener("submit", function(event) {
-        // Empêcher le comportement par défaut de soumission du formulaire
-        event.preventDefault();
+    <script>
+        // Gestionnaire d'événement pour soumettre le formulaire
+        document.querySelector("#missionForm").addEventListener("submit", function (event) {
+            // Empêcher le comportement par défaut de soumission du formulaire
+            event.preventDefault();
 
-        // Récupérer les valeurs des champs du formulaire
-        var id_incident = document.getElementById("incidentId").value;
-        var id_hero = document.querySelector("[name='id_hero']").value;
-        var titre = document.querySelector("[name='titre']").value;
-        var date_debut = document.querySelector("[name='datetime_debut']").value;
-        var date_fin = document.querySelector("[name='datetime_fin']").value;
-        var urgence = document.querySelector("[name='urgence']").value;
-        var id_adresse = document.getElementById("adresseId").value;
+            // Récupérer les valeurs des champs du formulaire
+            var id_incident = document.getElementById("incidentId").value;
+            var id_hero = document.querySelector("[name='id_hero']").value;
+            var titre = document.querySelector("[name='titre']").value;
+            var date_debut = document.querySelector("[name='datetime_debut']").value;
+            var date_fin = document.querySelector("[name='datetime_fin']").value;
+            var urgence = document.querySelector("[name='urgence']").value;
+            var id_adresse = document.getElementById("adresseId").value;
 
-        // Créer un objet avec les données du formulaire
-        var formData = {
-            "id_incident": id_incident,
-            "id_hero": id_hero,
-            "titre": titre,
-            "date_debut": date_debut,
-            "date_fin": date_fin,
-            "urgence": urgence,
-            "id_adresse": id_adresse
-        };
+            // Créer un objet avec les données du formulaire
+            var formData = {
+                "id_incident": id_incident,
+                "id_hero": id_hero,
+                "titre": titre,
+                "date_debut": date_debut,
+                "date_fin": date_fin,
+                "urgence": urgence,
+                "id_adresse": id_adresse
+            };
 
-        // Envoyer les données à l'API via une requête POST
-        fetch('http://localhost:8080/newMission', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-        })
-        .then(response => {
-            if (response.ok) {
-                alert("Mission créée avec succès !");
-                // Fermer la fenêtre modale ou effectuer toute autre action nécessaire
-            } else {
-                alert("Erreur lors de la création de la mission !");
-            }
-        })
-        .catch(error => {
-            console.error('Erreur lors de la demande :', error);
-            alert("Une erreur s'est produite. Veuillez réessayer !");
+            // Envoyer les données à l'API via une requête POST
+            fetch('http://localhost:8080/newMission', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert("Mission créée avec succès !");
+                        // Réinitialiser le formulaire
+                        document.getElementById("missionForm").reset();
+                        // Fermer la fenêtre modale ou effectuer toute autre action nécessaire
+                        document.getElementById("myModal").style.display = "none"; // Cette ligne ferme la fenêtre modale
+                    } else {
+                        alert("Erreur lors de la création de la mission !");
+                    }
+                })
+                .catch(error => {
+                    console.error('Erreur lors de la demande :', error);
+                    alert("Une erreur s'est produite. Veuillez réessayer !");
+                });
         });
-    });
-</script>
+    </script>
 
 
     <script>
