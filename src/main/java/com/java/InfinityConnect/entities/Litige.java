@@ -29,7 +29,7 @@ public class Litige {
 
     }
 
-    public void setMdHero(int id_hero) {
+    public void setIdHero(int id_hero) {
         hero.setId_hero(id_hero);
     }
     public void setIdMission(int id_mission) {

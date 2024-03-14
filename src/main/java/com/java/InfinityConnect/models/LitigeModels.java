@@ -9,43 +9,69 @@ public class LitigeModels {
 
     private int id_litige;
 
-    private Civile civile;
+    private int id_civile;
 
     private String type_litige;
 
-    private Hero hero;
+    private int id_hero;
 
-    private Mission mission;
+    private int id_mission;
     private String commentaire;
 
-    public LitigeModels(int id_litige, Civile civile, String type_litige, Hero hero, Mission mission, String commentaire) {
+    public LitigeModels(int id_litige, int id_civile, String type_litige, int id_hero, int id_mission, String commentaire) {
         this.id_litige = id_litige;
-        this.civile = civile;
+        this.id_civile = id_civile;
         this.type_litige = type_litige;
-        this.hero = hero;
-        this.mission = mission;
+        this.id_hero = id_hero;
+        this.id_mission = id_mission;
         this.commentaire = commentaire;
     }
 
-    public void setMdHero(int id_hero) {
-        hero.setId_hero(id_hero);
-    }
-    public void setIdMission(int id_mission) {
-        mission.setId_mission(id_mission);
-    }
-    public void setIdCivile(int id_civile) {
-        civile.setId_civile(id_civile);
-    }
-
-    public void setCommentaire(String commentaire) {
-        this.commentaire = commentaire;
+    public String getType_litige() {
+        return type_litige;
     }
 
     public void setType_litige(String type_litige) {
         this.type_litige = type_litige;
     }
 
+    public String getCommentaire() {
+        return commentaire;
+    }
+
+    public void setCommentaire(String commentaire) {
+        this.commentaire = commentaire;
+    }
+
+    public int getId_civile() {
+        return id_civile;
+    }
+
+    public void setId_civile(int id_civile) {
+        this.id_civile = id_civile;
+    }
+
+    public int getId_hero() {
+        return id_hero;
+    }
+
+    public void setId_hero(int id_hero) {
+        this.id_hero = id_hero;
+    }
+
+    public int getId_litige() {
+        return id_litige;
+    }
+
     public void setId_litige(int id_litige) {
         this.id_litige = id_litige;
+    }
+
+    public int getId_mission() {
+        return id_mission;
+    }
+
+    public void setId_mission(int id_mission) {
+        this.id_mission = id_mission;
     }
 }
