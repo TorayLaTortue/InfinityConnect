@@ -17,7 +17,7 @@ public class Mission {
     private String titre;
 
     @Column(name = "date_debut")
-    private Date date_debut;
+    private Date dateDebut;
 
     @Column(name = "date_fin")
     private Date date_fin;
@@ -26,7 +26,7 @@ public class Mission {
     private String urgence;
 
     @Column(name = "id_adresse")
-    private int id_adresse;
+    private int adresseId;
 
     public Mission() {
     }
@@ -63,12 +63,12 @@ public class Mission {
         this.titre = titre;
     }
 
-    public Date getDate_debut() {
-        return date_debut;
+    public Date getDateDebut() {
+        return dateDebut;
     }
 
-    public void setDate_debut(Date date_debut) {
-        this.date_debut = date_debut;
+    public void setDateDebut(Date dateDebut) {
+        dateDebut = dateDebut;
     }
 
     public Date getDate_fin() {
@@ -88,10 +88,10 @@ public class Mission {
     }
 
     public int getId_adresse() {
-        return id_adresse;
+        return adresseId;
     }
 
     public void setId_adresse(int id_adresse) {
-        this.id_adresse = id_adresse;
+        this.adresseId = id_adresse;
     }
 }

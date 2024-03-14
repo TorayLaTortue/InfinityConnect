@@ -1,26 +1,30 @@
-package com.java.InfinityConnect.models;
+package com.java.InfinityConnect.entities;
 
-public class HerosModels {
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "hero")
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Hero {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_hero;
     private Integer id_civil;
+    @Column(name = "pouvoir")
     private String pouvoir;
-
+    @Column(name = "point_faible")
     private String point_faible;
-
+    @Column(name = "score")
     private Double score;
+    @Column(name = "nom")
     private String nom;
+    @Column(name = "commentaire")
     private String commentaire;
 
 
-    public HerosModels(Integer id_hero, Integer id_civil, String pouvoir, String point_faible, Double score, String nom, String commentaire) {
-        this.id_hero = id_hero;
-        this.id_civil = id_civil;
-        this.pouvoir = pouvoir;
-        this.point_faible = point_faible;
-        this.score = score;
-        this.nom = nom;
-        this.commentaire = commentaire;
+
+    public Hero() {
+
     }
 
     public int getId_hero() {
@@ -55,7 +59,7 @@ public class HerosModels {
         this.point_faible = point_faible;
     }
 
-    public double getScore() {
+    public Double getScore() {
         return score;
     }
 

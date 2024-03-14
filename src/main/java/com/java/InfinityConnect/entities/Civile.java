@@ -2,16 +2,15 @@ package com.java.InfinityConnect.entities;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 @Entity
 @Table(name = "civile")
 @Inheritance(strategy = InheritanceType.JOINED)
-public class Civil {
+public class Civile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_civile;
+    private Integer id_civil;
     @Column(name = "nom")
     private String nom;
     @Column(name = "prenom")
@@ -26,28 +25,35 @@ public class Civil {
     @Column(name = "dernier_update")
     private Date dernier_modif;
     @Column(name = "incident_declarer")
-    private int incident_declarer;
+    private Integer incident_declarer;
     @Column(name = "victime")
-    private int victime;
+    private Integer victime;
 
     @Column(name = "id_adresse")
     private int id_adresse;
+    @Column(name = "password")
+    private String password;
+    @Column(name = "admin")
+    private Boolean admin;
+    @Column(name = "email")
+    private String email;
 
 
 
 
 
 
-    public Civil() {
+
+    public Civile() {
 
     }
 
-    public int getId_civile() {
-        return id_civile;
+    public Integer getId_civil() {
+        return id_civil;
     }
 
-    public void setId_civile(int id_civile) {
-        this.id_civile = id_civile;
+    public void setId_civil(Integer id_civil) {
+        this.id_civil = id_civil;
     }
 
     public String getNom() {
@@ -98,19 +104,19 @@ public class Civil {
         this.dernier_modif = dernier_modif;
     }
 
-    public int getIncident_declarer() {
+    public Integer getIncident_declarer() {
         return incident_declarer;
     }
 
-    public void setIncident_declarer(int incident_declarer) {
+    public void setIncident_declarer(Integer incident_declarer) {
         this.incident_declarer = incident_declarer;
     }
 
-    public int getVictime() {
+    public Integer getVictime() {
         return victime;
     }
 
-    public void setVictime(int victime) {
+    public void setVictime(Integer victime) {
         this.victime = victime;
     }
 
@@ -120,5 +126,29 @@ public class Civil {
 
     public void setId_adresse(int id_adresse) {
         this.id_adresse = id_adresse;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Boolean getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(Boolean admin) {
+        this.admin = admin;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

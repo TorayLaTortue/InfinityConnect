@@ -21,7 +21,6 @@ public class Vilain{
     private String danger;
 
     public Vilain() {
-
     }
     
 }

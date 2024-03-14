@@ -1,34 +1,29 @@
 package com.java.InfinityConnect.models;
 
-public class HerosModels {
+public class HeroDemandeModels {
 
-    private Integer id_hero;
+    private Integer idDemande;
     private Integer id_civil;
     private String pouvoir;
-
     private String point_faible;
-
-    private Double score;
-    private String nom;
+    private String nom_hero;
     private String commentaire;
 
-
-    public HerosModels(Integer id_hero, Integer id_civil, String pouvoir, String point_faible, Double score, String nom, String commentaire) {
-        this.id_hero = id_hero;
+    public HeroDemandeModels(Integer idDemande, Integer id_civil, String pouvoir, String point_faible, String nom_hero, String commentaire) {
+        this.idDemande = idDemande;
         this.id_civil = id_civil;
         this.pouvoir = pouvoir;
         this.point_faible = point_faible;
-        this.score = score;
-        this.nom = nom;
+        this.nom_hero = nom_hero;
         this.commentaire = commentaire;
     }
 
-    public int getId_hero() {
-        return id_hero;
+    public Integer getIdDemande() {
+        return idDemande;
     }
 
-    public void setId_hero(Integer id_hero) {
-        this.id_hero = id_hero;
+    public void setIdDemande(Integer idDemande) {
+        this.idDemande = idDemande;
     }
 
     public Integer getId_civil() {
@@ -54,21 +49,12 @@ public class HerosModels {
     public void setPoint_faible(String point_faible) {
         this.point_faible = point_faible;
     }
-
-    public double getScore() {
-        return score;
+    public String getNom_hero() {
+        return nom_hero;
     }
 
-    public void setScore(Double score) {
-        this.score = score;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setNom_hero(String nom_hero) {
+        this.nom_hero = nom_hero;
     }
 
     public String getCommentaire() {
@@ -79,3 +65,4 @@ public class HerosModels {
         this.commentaire = commentaire;
     }
 }
+
