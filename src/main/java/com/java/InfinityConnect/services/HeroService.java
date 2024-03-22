@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class HeroService implements IHeroService {
+public class HeroService implements IHeroService{
     @Autowired
     private HeroDao repository;
 
@@ -21,9 +21,11 @@ public class HeroService implements IHeroService {
         return repository.findAll();
     }
 
-    public Optional<Hero> findById(long id_hero) {
-        return repository.findById(id_hero);
+    public Hero findById(long id_hero) {
+        Optional<Hero> optionalHero = repository.findById(id_hero);
+        return optionalHero.orElse(null);
     }
-}
 
+
+}
 

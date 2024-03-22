@@ -4,4 +4,7 @@ import com.java.InfinityConnect.entities.Civile;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CivileDao extends JpaRepository<Civile, Long> {
+
+    Civile findByEmailAndPassword(String email, String password);
+
 }

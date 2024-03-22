@@ -21,8 +21,15 @@ public class AdresseService implements IAdresseService{
         return repository.findAll();
     }
 
-    public Optional<Adresse> findById(long id_adresse) {
-        return repository.findById(id_adresse);
+    public Adresse findById(long id_adresse) {
+        Optional<Adresse> optionalAdresse = repository.findById(id_adresse);
+        return optionalAdresse.orElse(null);
+    }
+    public List<Adresse> findByVille(String ville) {
+        return repository.findByVille(ville);
+    }
+    public Adresse save(Adresse adresse) {
+        return repository.save(adresse);
     }
 }
 

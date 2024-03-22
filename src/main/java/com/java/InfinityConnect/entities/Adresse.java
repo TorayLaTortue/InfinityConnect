@@ -20,6 +20,9 @@ public class Adresse {
 
     @Column(name = "rue")
     private String rue;
+    @Column(name = "numero")
+    private int numero;
+
 
     public Adresse() {
     }
@@ -56,4 +59,11 @@ public class Adresse {
         this.rue = rue;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 }

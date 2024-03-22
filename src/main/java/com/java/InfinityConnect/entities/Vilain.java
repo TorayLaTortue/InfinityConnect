@@ -22,9 +22,8 @@ public class Vilain {
     @Column(name = "danger")
     private int danger;
 
-    @OneToOne
-    @JoinColumn(name = "id_civile", referencedColumnName = "id_civile")
-    private Civile civile;
+    @Column(name = "id_civil")
+    private Integer id_civil;
 
     public Vilain() {
     }
@@ -62,10 +61,19 @@ public class Vilain {
     }
 
 
-    public void setIdCivile(int id_civile) {
-        if (civile == null) {
-            civile = new Civile();
-        }
-        civile.setId_civile(id_civile);
+    public int getId_vilain() {
+        return id_vilain;
+    }
+
+    public void setId_vilain(int id_vilain) {
+        this.id_vilain = id_vilain;
+    }
+
+    public Integer getId_civil() {
+        return id_civil;
+    }
+
+    public void setId_civil(Integer id_civil) {
+        this.id_civil = id_civil;
     }
 }

@@ -21,8 +21,16 @@ public class CivileService implements ICivileService {
         return repository.findAll();
     }
 
-    public Optional<Civile> findById(long id_civile) {
-        return repository.findById(id_civile);
+    public Civile findById(long id_civil) {
+        Optional<Civile> optionalCivil = repository.findById(id_civil);
+        return optionalCivil.orElse(null);
     }
+    public Civile findByEmailAndPassword(String email, String password) {
+        return repository.findByEmailAndPassword(email, password);
+    }
+    public Civile save(Civile civile) {
+        return repository.save(civile);
+    }
+
 }
 
