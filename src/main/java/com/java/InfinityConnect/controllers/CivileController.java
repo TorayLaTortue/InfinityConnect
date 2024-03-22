@@ -159,14 +159,10 @@ public class CivileController {
         if (existingAdresse == null) {
             return ResponseEntity.notFound().build();
         }
-
-        // Mettre à jour les champs de l'adresse existante avec les valeurs de l'adresse reçue
         existingAdresse.setVille(adresse.getVille());
         existingAdresse.setCode_postal(adresse.getCode_postal());
         existingAdresse.setRue(adresse.getRue());
         existingAdresse.setNumero(adresse.getNumero());
-
-        // Enregistrer l'adresse mise à jour
         Adresse savedAdresse = adresseService.save(existingAdresse);
         return ResponseEntity.ok(savedAdresse);
     }

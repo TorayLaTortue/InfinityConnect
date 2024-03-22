@@ -9,6 +9,7 @@ public class Hero {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_hero;
+    @Column(name = "id_civil")
     private Integer id_civil;
     @Column(name = "pouvoir")
     private String pouvoir;

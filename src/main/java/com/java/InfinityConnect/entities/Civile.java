@@ -9,6 +9,7 @@ import java.util.Date;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Civile {
     @Id
+    @Column(name = "id_civil")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id_civil;
     @Column(name = "nom")

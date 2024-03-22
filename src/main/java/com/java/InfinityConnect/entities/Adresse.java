@@ -59,4 +59,11 @@ public class Adresse {
         this.rue = rue;
     }
 
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
 }

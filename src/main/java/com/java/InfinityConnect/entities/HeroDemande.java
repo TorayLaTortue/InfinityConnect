@@ -10,7 +10,6 @@ public class HeroDemande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idDemande;
-
     @Column(name = "id_civil")
     private Integer id_civil;
     @Column(name = "pouvoir")

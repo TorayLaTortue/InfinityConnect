@@ -27,7 +27,6 @@ public class Organisation {
 
     private String dernier_modif;
     @Column(name = "incident_declarer")
-
     private int incident_declarer;
     @Column(name = "impliquer_mission")
     private int impliquer_mission;

@@ -32,7 +32,7 @@ public class VilainController {
         vilain.setNom(newVilain.getNom());
         vilain.setPouvoir(newVilain.getPouvoir());
         vilain.setPoint_faible(newVilain.getPoint_faible());
-        vilain.setIdCivile(newVilain.getId_civile());
+        vilain.setId_civil(newVilain.getId_civile());
         return vilainService.AddVilain(vilain);
     }
 
